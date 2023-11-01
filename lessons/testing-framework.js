@@ -16,20 +16,44 @@
  * Execute: Use `node lessons/testing-framework.js` to run the test.
  */
 
-const {sum, subtract} = require('../math')
+const {sum, subtract} = require('../math');
+// const {expect} = require('./assertion-library');
+// import expect from './assertion-library'
 
-test('sum adds numbers', () => {
-  const result = sum(3, 7)
-  const expected = 10
-  expect(result).toBe(expected)
-})
+
+function test(title,callback){
+try {
+callback();
+console.log(`${title} Passed`);
+}
+catch(error) {
+console.log(`${title} Fails \n`);
+console.log(error);
+}
+}
+function sumtest() {
+    const result = sum(3, 7)
+    const expected = 10
+    expect(result).toBe(expected)
+  }
+  console.time();
+test('sum adds numbers', sumtest)
 
 test('subtract subtracts numbers', () => {
   const result = subtract(7, 3)
   const expected = 4
   expect(result).toBe(expected)
 })
+console.timeEnd();
+function expect(actual){
 
+  return {
+      toBe(expected){
+if(actual !== expected){
+  throw new Error(`${actual} is not equal to ${expected}`)
+}
+}
+  }}
 /**
  * Answer: Checkout the main branch for the answer.
  */

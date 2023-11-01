@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A repo for my JavaScript Testing Fundamentals course",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "global" : "node --require ./setup-globals.js"
   },
   "keywords": [],
   "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",

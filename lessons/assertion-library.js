@@ -29,7 +29,7 @@ result = subtract(7, 3)
 expected = 4
 expect(result).toBe(expected)
 
-function expect(actual){
+ function expect(actual){
 
     return {
         toBe(expected){
@@ -45,7 +45,7 @@ throw new Error(`${actual} is not greater than ${expected}`)
     }
 
 }
-
+module.exports =  {expect};
 // export default expect;
 /**
  * Answer: Checkout the main branch for the answer.

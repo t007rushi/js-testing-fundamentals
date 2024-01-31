@@ -17,7 +17,7 @@
  */
 
 const {sum, subtract} = require('../math');
-// const {expect} = require('./assertion-library');
+const {expect} = require('./assertion-library');
 // import expect from './assertion-library'
 
 
@@ -45,15 +45,15 @@ test('subtract subtracts numbers', () => {
   expect(result).toBe(expected)
 })
 console.timeEnd();
-function expect(actual){
+// function expect(actual){
 
-  return {
-      toBe(expected){
-if(actual !== expected){
-  throw new Error(`${actual} is not equal to ${expected}`)
-}
-}
-  }}
+//   return {
+//       toBe(expected){
+// if(actual !== expected){
+//   throw new Error(`${actual} is not equal to ${expected}`)
+// }
+// }
+//   }}
 /**
  * Answer: Checkout the main branch for the answer.
  */

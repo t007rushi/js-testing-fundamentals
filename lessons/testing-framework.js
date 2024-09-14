@@ -27,13 +27,13 @@ callback();
 console.log(`${title} Passed`);
 }
 catch(error) {
-console.log(`${title} Fails \n`);
-console.log(error);
+console.log(`${title} Fails `);
+console.log('%c', error.message, '\n', "color:red;" );
 }
 }
 function sumtest() {
     const result = sum(3, 7)
-    const expected = 10
+    const expected = 9
     expect(result).toBe(expected)
   }
   console.time();

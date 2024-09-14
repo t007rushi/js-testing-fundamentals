@@ -19,4 +19,5 @@ async function test(title, callback) {
   }
   
   global.test = test
+  // console.log(global.test("hi",async() => { await Promise.resolve(10).then(console.log("hello"))} ))
   global.expect = expect
